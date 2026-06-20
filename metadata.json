@@ -1,0 +1,6 @@
+{
+  "name": "Lolipop",
+  "description": "A minimal, premium video streaming experience themed in vibrant purple and electric violet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

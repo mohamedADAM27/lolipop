@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  --color-violet-950: #2e1065;
+}
+
+@utility glow-purple {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.45);
+}
+
+@utility glow-purple-lg {
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.25);
+}
+
+/* Custom scrollbar for purple theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #150b24;
+}
+::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Rise animation for lolipop reactions */
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1.2) rotate(-10deg);
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-400px) scale(0.7) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.reaction-bubble {
+  animation: bubble-rise 3.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Light flicker animation */
+@keyframes ambient-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-ambient {
+  animation: ambient-glow 8s ease-in-out infinite;
+}
+
